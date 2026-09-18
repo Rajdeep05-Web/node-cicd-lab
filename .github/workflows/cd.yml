@@ -1,0 +1,16 @@
+name: CD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Check deployment server
+        run: |
+          echo "Running on deployment VM"
+          hostname
+          whoami
+          docker --version
