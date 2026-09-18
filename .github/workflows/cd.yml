@@ -8,9 +8,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Check deployment server
+      - name: Deploy application
         run: |
-          echo "Running on deployment VM"
-          hostname
-          whoami
-          docker --version
+          cd ~/deploy
+          ./deploy.sh
